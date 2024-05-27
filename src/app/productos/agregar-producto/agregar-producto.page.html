@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Agregar</ion-title>
+    <ion-button slot="end">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Id</ion-label>
+      <ion-input type="text" name="txId" [(ngModel)]="nuevoProducto.id" placeholder="Ingrese el nombre del producto" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txNombre" [(ngModel)]="nuevoProducto.nombre" placeholder="Ingrese el nombre del producto" required></ion-input>
+    </ion-item>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input type="text" name="txPrecio" [(ngModel)]="nuevoProducto.precio" placeholder="Ingrese el precio" required></ion-input>
+    </ion-item>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="text" name="txCantidad" [(ngModel)]="nuevoProducto.cantidad" placeholder="Ingrese la cantidad" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="crearProducto()" expand="block" color="success">Agregar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
